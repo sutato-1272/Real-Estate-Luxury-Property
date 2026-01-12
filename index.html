@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>The Heritage | Hunian Mewah Eksklusif di Jakarta Selatan</title>
+    <meta name="description" content="Miliki hunian sultan dengan arsitektur modern & teknologi smart home. Unit terbatas di jantung Jakarta. Cek e-brosur dan penawaran eksklusif hari ini.">
+    <meta name="keywords" content="Luxury Real Estate Jakarta, Rumah Mewah Dijual, Mansion Eksklusif, Properti Investasi, Smart Home Jakarta">
+    <meta name="author" content="Ciledug Promo Agency">
+    <link rel="canonical" href="https://project-8-realestate.vercel.app/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://project-8-realestate.vercel.app/">
+    <meta property="og:title" content="The Heritage | Redefining Elegance - Luxury Residence">
+    <meta property="og:description" content="Miliki hunian sultan dengan arsitektur modern & teknologi smart home. Unit terbatas.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://project-8-realestate.vercel.app/">
+    <meta property="twitter:title" content="The Heritage | Luxury Residence">
+    <meta property="twitter:description" content="Miliki hunian sultan dengan arsitektur modern & teknologi smart home.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateListing",
+      "name": "The Heritage Luxury Mansion",
+      "description": "Exclusive luxury housing with modern smart home features in South Jakarta.",
+      "url": "https://project-8-realestate.vercel.app/",
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Jakarta Selatan",
+        "addressRegion": "DKI Jakarta",
+        "addressCountry": "ID"
+      },
+      "telephone": "+6285283212205",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "IDR",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "The Heritage Development"
+        }
+      }
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700;800&family=Inter:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --accent: #c5a358; --dark: #070707; --glass: rgba(255, 255, 255, 0.02); }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--dark); font-family: 'Inter', sans-serif; color: #fff; overflow-x: hidden; }
+        .font-plus { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+        /* AURA BUTTON 631BB8 - LUXURY GOLD EDITION */
+        .btn-luxury {
+            position: relative; padding: 18px 45px; border-radius: 4px;
+            background: #000; color: #fff; font-weight: 500; font-size: 11px;
+            letter-spacing: 4px; text-transform: uppercase; overflow: hidden;
+            border: none; cursor: pointer; transition: 0.5s; display: inline-flex;
+        }
+        .btn-luxury::before {
+            content: ""; position: absolute; inset: -150%;
+            background: conic-gradient(from 0deg, transparent 0deg, transparent 280deg, var(--accent) 320deg, #fff 360deg);
+            animation: rotate-aura 4s linear infinite; z-index: 0;
+        }
+        .btn-luxury::after {
+            content: ""; position: absolute; inset: 1px;
+            background: var(--dark); border-radius: 3px; z-index: 1;
+        }
+        .btn-luxury .content { position: relative; z-index: 2; display: flex; align-items: center; gap: 10px; }
+        .btn-luxury:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(197, 163, 88, 0.2); }
+
+        @keyframes rotate-aura { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        /* FAST PERFORMANCE ANIMATION */
+        .hero-zoom {
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000');
+            background-size: cover; background-position: center;
+            animation: slowZoom 30s infinite alternate; will-change: transform;
+        }
+        @keyframes slowZoom { from { transform: scale(1); } to { transform: scale(1.08); } }
+
+        .aura-card {
+            background: var(--glass); border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px); transition: 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .aura-card:hover { border-color: var(--accent); background: rgba(255,255,255,0.06); transform: scale(1.02); }
+
+        /* SCROLL BAR */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+    <header class="fixed top-0 w-full z-[100] px-8 py-6 flex justify-between items-center bg-black/50 backdrop-blur-md border-b border-white/5">
+        <div class="text-xl font-bold tracking-[0.4em] font-plus italic">HERITAGE<span class="text-[#c5a358]">.</span></div>
+        <nav class="hidden md:flex gap-12 text-[10px] font-bold uppercase tracking-[0.4em] text-gray-500">
+            <a href="#about" class="hover:text-white transition">Architect</a>
+            <a href="#spec" class="hover:text-white transition">Gallery</a>
+            <a href="#map" class="hover:text-white transition">Maps</a>
+        </nav>
+        <a href="https://wa.me/6285283212205" class="btn-luxury !py-3 !px-8 !text-[9px]">
+            <span class="content">Book Viewing</span>
+        </a>
+    </header>
+
+    <section class="relative h-screen overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0 hero-zoom"></div>
+        <div class="relative z-10 text-center px-6">
+            <span class="text-[#c5a358] font-bold tracking-[0.6em] text-[10px] uppercase mb-6 block">Jakarta's Finest Residence</span>
+            <h1 class="text-5xl md:text-[100px] font-plus font-extrabold tracking-tighter leading-none mb-12">THE NEW<br><span class="italic font-light opacity-80 text-white">STANDARD.</span></h1>
+            <div class="flex flex-col md:flex-row gap-6 justify-center">
+                <button class="btn-luxury" onclick="document.getElementById('spec').scrollIntoView()">
+                    <span class="content">View Selection →</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="spec" class="py-32 container mx-auto px-6">
+        <div class="text-center mb-20">
+            <h2 class="text-3xl md:text-5xl font-plus font-bold tracking-tighter">UNPARALLELED <span class="text-[#c5a358] italic">DETAILS.</span></h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="md:col-span-2 md:row-span-2 aura-card p-12 flex flex-col justify-between rounded-3xl">
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">Designed for the Legacy.</h3>
+                    <p class="text-gray-400 leading-relaxed">Setiap sudut dirancang oleh arsitek pemenang penghargaan untuk memastikan sirkulasi udara dan cahaya alami yang sempurna.</p>
+                </div>
+                <div class="grid grid-cols-3 gap-4 border-t border-white/10 pt-10 mt-10">
+                    <div class="text-center">
+                        <span class="block text-2xl font-bold text-[#c5a358]">12</span>
+                        <span class="text-[9px] uppercase tracking-widest text-gray-500">Units Only</span>
+                    </div>
+                    <div class="text-center border-x border-white/10">
+                        <span class="block text-2xl font-bold text-[#c5a358]">4</span>
+                        <span class="text-[9px] uppercase tracking-widest text-gray-500">Floors</span>
+                    </div>
+                    <div class="text-center">
+                        <span class="block text-2xl font-bold text-[#c5a358]">24H</span>
+                        <span class="text-[9px] uppercase tracking-widest text-gray-500">Butler</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aura-card rounded-3xl overflow-hidden aspect-square group">
+                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=600" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+            </div>
+            <div class="aura-card rounded-3xl overflow-hidden aspect-square group">
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=600" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+            </div>
+
+            <div class="md:col-span-2 aura-card p-10 rounded-3xl flex items-center justify-between group">
+                <div class="flex gap-6 items-center">
+                    <div class="w-12 h-12 bg-[#c5a358]/10 rounded-full flex items-center justify-center text-[#c5a358]">✦</div>
+                    <div>
+                        <h4 class="font-bold">Biometric Security</h4>
+                        <p class="text-[10px] text-gray-500 uppercase tracking-widest">Advanced Safety</p>
+                    </div>
+                </div>
+                <span class="text-xs font-bold text-[#c5a358] underline">View Tech Specs</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="map" class="py-32 bg-white text-black">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div class="order-2 md:order-1 h-[500px] bg-gray-200 rounded-3xl overflow-hidden shadow-2xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15863.6657934444!2d106.816666!3d-6.208333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e0980b6f95%3A0x86701f05908922c0!2sSouth%20Jakarta!5e0!3m2!1sen!2sid!4v1700000000000" 
+                    width="100%" height="100%" style="border:0; filter: grayscale(1) contrast(1.2) invert(1);" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="order-1 md:order-2">
+                <span class="text-gray-400 font-bold tracking-[0.4em] text-[10px] uppercase mb-4 block">Neighborhood</span>
+                <h2 class="text-4xl md:text-7xl font-plus font-extrabold tracking-tighter mb-8 leading-none">PRIME<br><span class="text-[#c5a358]">DISTRICT.</span></h2>
+                <p class="text-gray-600 mb-10 leading-relaxed">Berlokasi strategis di kawasan prestisius Jakarta Selatan. Hanya 5 menit menuju Central Business District dan pusat perbelanjaan papan atas.</p>
+                <div class="space-y-4 mb-10">
+                    <div class="flex justify-between border-b border-gray-100 pb-2">
+                        <span class="text-xs font-bold uppercase tracking-widest">CBD Area</span>
+                        <span class="text-xs text-gray-500 italic">5 Mins Drive</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-100 pb-2">
+                        <span class="text-xs font-bold uppercase tracking-widest">International School</span>
+                        <span class="text-xs text-gray-500 italic">8 Mins Drive</span>
+                    </div>
+                </div>
+                <a href="https://wa.me/6285283212205" class="btn-luxury">
+                    <span class="content">Contact Specialist →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 border-t border-white/5 text-center px-6 bg-black">
+        <div class="text-xl font-bold tracking-[0.5em] font-plus italic mb-8">HERITAGE.</div>
+        <p class="text-[9px] font-bold text-gray-600 tracking-[0.4em] uppercase mb-12">THE REAL ESTATE MASTERPIECE • PROTOCOL SIAGA 1</p>
+        <div class="flex flex-wrap justify-center gap-10 text-[10px] font-bold tracking-widest text-gray-500">
+            <a href="#" class="hover:text-white transition">LEGALITY</a>
+            <a href="#" class="hover:text-white transition">PARTNERS</a>
+            <a href="#" class="hover:text-white transition">AGENT LOGIN</a>
+        </div>
+    </footer>
+
+</body>
+</html>
