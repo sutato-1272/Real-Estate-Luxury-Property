@@ -7,17 +7,10 @@
     <title>The Mansion Aura | Rumah Sultan & Investasi Properti Mewah</title>
     <meta name="description" content="The Mansion Aura. Hunian mahakarya dengan konsep Heritage Luxury. Smart Home System, Private Pool, dan lokasi emas di jantung kota. Jadwalkan Private Viewing.">
     <meta name="keywords" content="Jual Rumah Mewah, Properti Sultan, Investasi Properti, Real Estate Indonesia, The Mansion Aura, Rumah Klasik Modern">
-    <meta name="author" content="Ciledug Promo Property">
     <meta name="robots" content="index, follow">
     
-    <link rel="canonical" href="https://real-estate-luxury-property.vercel.app/">
+    <meta name="google-site-verification" content="PASTE_KODE_VERIFIKASI_GSC_ANDA_DISINI" />
     
-    <meta property="og:title" content="The Mansion Aura - Legacy of Kings">
-    <meta property="og:description" content="Miliki hunian sekelas istana. Private Viewing Only.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1600596542815-2a4d9f6e6d96?q=80&w=1200">
-    <meta property="og:url" content="https://real-estate-luxury-property.vercel.app/">
-    <meta property="og:type" content="product">
-
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -25,15 +18,6 @@
       "name": "The Mansion Aura",
       "description": "Hunian mewah konsep Heritage Modern dengan fasilitas Smart Home.",
       "numberOfRooms": 12,
-      "occupancy": {
-        "@type": "QuantitativeValue",
-        "value": 1
-      },
-      "floorSize": {
-        "@type": "QuantitativeValue",
-        "value": 500,
-        "unitCode": "SQM"
-      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Tangerang",
@@ -43,252 +27,315 @@
     }
     </script>
 
-    <meta name="google-site-verification" content="PASTE_KODE_GSC_DISINI" />
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONTOH_ID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-CONTOH_ID'); 
-      gtag('config', 'G-CONTOH_ID'); 
-    </script>
-
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'MASUKAN_ID_PIXEL_DISINI');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=MASUKAN_ID_PIXEL_DISINI&ev=PageView&noscript=1"
-    /></noscript>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
+        /* 1. RESET & VARIABLES */
         :root { 
             --gold: #d4af37; 
-            --dark-gold: #aa8c2c;
+            --gold-glow: rgba(212, 175, 55, 0.5);
             --bg-dark: #0a0a0a; 
-            --glass: rgba(20, 20, 20, 0.8);
+            --bg-darker: #050505;
+            --glass: rgba(255, 255, 255, 0.03);
+            --text-gray: #a3a3a3;
         }
-        
-        body { background-color: var(--bg-dark); color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
-        h1, h2, h3 { font-family: 'Cinzel', serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background-color: var(--bg-dark); 
+            color: #fff; 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            overflow-x: hidden; 
+            padding-bottom: 80px; /* Space for Sticky Bar */
+        }
+        h1, h2, h3 { font-family: 'Cinzel', serif; font-weight: 400; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
 
-        /* HERO SLOW ZOOM ANIMATION */
+        /* 2. UTILITIES */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .text-gold { color: var(--gold); }
+        .uppercase { text-transform: uppercase; }
+        .tracking-wide { letter-spacing: 2px; }
+        .tracking-widest { letter-spacing: 4px; }
+        .hidden-mobile { display: none; }
+        
+        @media(min-width: 768px) {
+            .hidden-mobile { display: block; }
+            .md-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        }
+
+        /* 3. NAVBAR */
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            padding: 20px;
+            display: flex; justify-content: space-between; align-items: center;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+        }
+        .nav-logo { font-size: 1.5rem; font-weight: bold; letter-spacing: 2px; }
+        .nav-links { display: none; gap: 30px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; color: #ccc; }
+        @media(min-width: 768px) { .nav-links { display: flex; } }
+        .nav-links a:hover { color: var(--gold); }
+
+        /* 4. HERO SECTION (ZOOM ANIMATION) */
+        header {
+            height: 100vh; width: 100%; position: relative; overflow: hidden;
+            display: flex; align-items: center; justify-content: center; text-align: center;
+        }
         .hero-bg {
-            background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1600596542815-2a4d9f6e6d96?q=80&w=2000');
-            background-size: cover;
-            background-position: center;
+            position: absolute; inset: 0; z-index: 0;
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.9)), 
+                              url('https://images.unsplash.com/photo-1600596542815-2a4d9f6e6d96?q=80&w=1200');
+            background-size: cover; background-position: center;
             animation: slowZoom 20s infinite alternate;
         }
-        @keyframes slowZoom {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.15); }
-        }
+        @keyframes slowZoom { from { transform: scale(1); } to { transform: scale(1.15); } }
+        
+        .hero-content { position: relative; z-index: 10; padding: 0 20px; max-width: 800px; }
+        .hero-subtitle { color: var(--gold); font-size: 0.8rem; letter-spacing: 5px; margin-bottom: 20px; display: block; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        
+        .hero-title { font-size: 3rem; line-height: 1.1; margin-bottom: 30px; }
+        .hero-title span { background: linear-gradient(to right, #fde68a, #d4af37, #b45309); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        @media(min-width: 768px) { .hero-title { font-size: 5rem; } }
+        
+        .hero-desc { color: #ddd; font-size: 1rem; margin-bottom: 40px; font-weight: 300; line-height: 1.6; }
 
-        /* AURA BREATHING BUTTON */
+        /* 5. AURA BUTTON (BREATHING EFFECT) */
         .aura-btn {
-            background: linear-gradient(45deg, var(--gold), var(--dark-gold));
-            color: #000;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            display: inline-block; padding: 15px 40px;
+            background: linear-gradient(45deg, #d4af37, #aa8c2c);
+            color: #000; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;
             box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
             animation: breathing 3s infinite ease-in-out;
-            transition: all 0.3s ease;
+            border-radius: 4px;
         }
         @keyframes breathing {
             0% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.8); }
+            50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.6); }
             100% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.3); }
         }
-        .aura-btn:hover { transform: translateY(-3px); filter: brightness(1.2); }
+        .aura-btn:hover { transform: translateY(-3px); filter: brightness(1.1); }
 
-        /* BENTO GLASS CARD */
+        /* 6. CONCEPT SECTION */
+        .section { padding: 80px 0; }
+        .concept-img { 
+            width: 100%; height: 400px; object-fit: cover; 
+            filter: grayscale(100%); transition: 1s; border-radius: 2px;
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+        }
+        .concept-img:hover { filter: grayscale(0%); }
+        .concept-list li { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; color: #ccc; font-size: 0.9rem; }
+        .concept-list span { color: var(--gold); }
+
+        /* 7. BENTO GRID SPECS */
+        .bg-pattern { background-color: #000; position: relative; }
+        .bg-pattern::before {
+            content: ''; position: absolute; inset: 0; opacity: 0.05;
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+        }
+        .bento-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 15px; position: relative; z-index: 1; margin-top: 50px;
+        }
+        @media(min-width: 768px) { .bento-grid { grid-template-columns: repeat(4, 1fr); } }
+        
         .bento-card {
             background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: 0.4s;
+            padding: 30px 20px; text-align: center;
+            transition: 0.4s; aspect-ratio: 1/1;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
         }
-        .bento-card:hover {
-            background: rgba(212, 175, 55, 0.05);
-            border-color: var(--gold);
-        }
+        .bento-card:hover { background: rgba(212, 175, 55, 0.05); border-color: var(--gold); }
+        
+        .bento-num { font-size: 2.5rem; color: var(--gold); display: block; margin-bottom: 10px; font-family: 'Cinzel', serif; }
+        .bento-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #888; }
+        
+        .bento-wide { grid-column: span 2; position: relative; overflow: hidden; }
+        .bento-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; transition: 0.7s; }
+        .bento-wide:hover .bento-img { transform: scale(1.1); opacity: 0.6; }
+        .bento-content { position: relative; z-index: 10; text-align: left; width: 100%; padding: 20px; }
 
-        /* STICKY BOTTOM BAR */
+        /* 8. LOCATION (MAP) */
+        .map-frame {
+            height: 400px; width: 100%; border-radius: 10px; overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); padding: 5px;
+        }
+        iframe { filter: grayscale(100%) invert(92%) contrast(83%); width: 100%; height: 100%; border: 0; }
+
+        /* 9. STICKY BOTTOM BAR */
         .sticky-bar {
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(15px);
+            position: fixed; bottom: 0; left: 0; width: 100%; z-index: 99;
+            background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(15px);
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px 20px;
+            display: flex; justify-content: space-between; align-items: center;
         }
+        .sticky-price { display: none; }
+        .sticky-btns { display: flex; gap: 10px; width: 100%; }
+        
+        .btn-outline { flex: 1; text-align: center; padding: 12px; border: 1px solid rgba(255,255,255,0.2); font-size: 0.7rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        .btn-outline:hover { background: rgba(255,255,255,0.1); }
+        
+        .btn-fill { flex: 1; text-align: center; padding: 12px; background: var(--gold); color: #000; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        .btn-fill:hover { background: #b8860b; }
 
-        .text-gold { color: var(--gold); }
-        .border-gold { border-color: var(--gold); }
+        @media(min-width: 768px) {
+            .sticky-price { display: block; }
+            .sticky-price h4 { font-size: 0.9rem; font-weight: bold; margin-bottom: 2px; }
+            .sticky-price span { color: var(--gold); font-size: 0.8rem; }
+            .sticky-btns { width: auto; }
+            .btn-outline, .btn-fill { padding: 12px 30px; width: auto; flex: none; }
+        }
+        
+        /* 10. FOOTER & NAGA LINKS */
+        footer { background: #000; padding: 60px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); margin-bottom: 60px; }
+        .footer-links a { font-size: 0.7rem; color: #666; text-transform: uppercase; letter-spacing: 2px; margin: 0 10px; }
+        .footer-links a:hover { color: #fff; }
+        
+        /* Gaya Khusus Link Naga (Tech Partner) */
+        .tech-partner { margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .tech-partner a { font-size: 10px; color: #333; text-decoration: none; font-family: monospace; transition: 0.3s; }
+        .tech-partner a:hover { color: var(--gold); }
+
     </style>
 </head>
-<body class="pb-24 md:pb-0"> <nav class="fixed w-full z-50 px-6 py-5 flex justify-between items-center bg-gradient-to-b from-black/80 to-transparent">
-        <div class="text-xl md:text-2xl font-bold tracking-widest text-white">MANSION<span class="text-gold">AURA.</span></div>
-        <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-[0.2em] text-gray-300">
-            <a href="#concept" class="hover:text-gold transition">Heritage</a>
-            <a href="#specs" class="hover:text-gold transition">Specifications</a>
-            <a href="#location" class="hover:text-gold transition">Location</a>
+<body>
+
+    <nav>
+        <div class="nav-logo">MANSION<span class="text-gold">AURA.</span></div>
+        <div class="nav-links">
+            <a href="#concept">Heritage</a>
+            <a href="#specs">Specifications</a>
+            <a href="#location">Location</a>
         </div>
     </nav>
 
-    <header class="relative h-screen w-full overflow-hidden flex items-center justify-center text-center">
-        <div class="absolute inset-0 hero-bg z-0"></div>
-        <div class="relative z-10 px-6 max-w-4xl">
-            <p class="text-gold tracking-[0.5em] text-xs md:text-sm uppercase mb-4 animate-pulse">The Crown Jewel of Tangerang</p>
-            <h1 class="text-5xl md:text-8xl text-white mb-8 leading-tight">
-                LEGACY OF <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600">KINGS</span>
-            </h1>
-            <p class="text-gray-300 text-sm md:text-lg mb-10 font-light tracking-wide max-w-2xl mx-auto">
+    <header>
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <span class="hero-subtitle">THE CROWN JEWEL OF TANGERANG</span>
+            <h1 class="hero-title">LEGACY OF <br><span>KINGS</span></h1>
+            <p class="hero-desc">
                 Bukan sekadar tempat tinggal. Ini adalah simbol pencapaian tertinggi hidup Anda. 
                 <br>Rasakan kemewahan "Heritage" yang abadi.
             </p>
-            <a href="https://wa.me/6285283212205?text=Halo%20Admin,%20saya%20tertarik%20Private%20Viewing%20The%20Mansion" class="aura-btn px-8 py-4 rounded-none md:rounded-lg inline-block tracking-widest text-xs md:text-sm">
+            <a href="https://wa.me/6285283212205?text=Halo%20Admin,%20saya%20tertarik%20Private%20Viewing%20The%20Mansion" class="aura-btn">
                 SCHEDULE PRIVATE VIEWING
             </a>
         </div>
-        
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-gray-500 text-[10px] tracking-[0.3em] uppercase">
-            Scroll to Explore
-        </div>
     </header>
 
-    <section id="concept" class="py-24 px-6 bg-[#0a0a0a]">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <section id="concept" class="section" style="background-color: var(--bg-dark);">
+        <div class="container md-grid-2">
             <div>
-                <div class="w-16 h-[1px] bg-gold mb-8"></div>
-                <h2 class="text-3xl md:text-5xl text-white mb-6 leading-tight">WHERE CLASSIC MEETS <span class="text-gold italic">MODERNITY.</span></h2>
-                <p class="text-gray-400 leading-relaxed mb-6 font-light">
-                    The Mansion Aura dirancang oleh arsitek dunia dengan memadukan pilar-pilar klasik Romawi dan teknologi Smart Home masa depan. Setiap sudut adalah karya seni.
+                <div style="width: 50px; height: 1px; background: var(--gold); margin-bottom: 30px;"></div>
+                <h2 style="font-size: 2.5rem; line-height: 1.2; margin-bottom: 20px;">WHERE CLASSIC MEETS <span class="text-gold" style="font-style: italic;">MODERNITY.</span></h2>
+                <p style="color: #a3a3a3; line-height: 1.8; margin-bottom: 30px; font-weight: 300;">
+                    The Mansion Aura dirancang oleh arsitek dunia dengan memadukan pilar-pilar klasik Romawi dan teknologi Smart Home masa depan. Setiap sudut adalah karya seni yang menceritakan kesuksesan pemiliknya.
                 </p>
-                <ul class="space-y-4 text-sm text-gray-300">
-                    <li class="flex items-center gap-3">
-                        <span class="text-gold">✦</span> Marmer Import Italia
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <span class="text-gold">✦</span> High Ceiling 8 Meter
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <span class="text-gold">✦</span> Feng Shui Perfect Balance
-                    </li>
+                <ul class="concept-list">
+                    <li><span>✦</span> Marmer Import Italia & High Ceiling 8 Meter</li>
+                    <li><span>✦</span> Feng Shui Perfect Balance Layout</li>
+                    <li><span>✦</span> Private Elevator & Sky Lounge Access</li>
                 </ul>
             </div>
-            <div class="relative">
-                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000" class="w-full h-[500px] object-cover grayscale hover:grayscale-0 transition duration-1000 ease-in-out rounded-sm shadow-[0_0_50px_rgba(0,0,0,0.5)]">
-                <div class="absolute -bottom-10 -left-10 w-40 h-40 border border-gold/30 hidden md:block"></div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=600" class="concept-img" alt="Luxury Interior">
             </div>
         </div>
     </section>
 
-    <section id="specs" class="py-24 px-6 bg-black relative">
-        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
-        <div class="max-w-7xl mx-auto relative z-10">
-            <div class="text-center mb-16">
-                <span class="text-gold text-xs tracking-[0.3em] uppercase">The Specifications</span>
-                <h2 class="text-4xl md:text-5xl text-white mt-4">UNMATCHED <span class="italic text-gray-500">DETAILS</span></h2>
-            </div>
+    <section id="specs" class="section bg-pattern">
+        <div class="container text-center">
+            <span style="color: var(--gold); font-size: 0.8rem; letter-spacing: 4px; text-transform: uppercase;">The Specifications</span>
+            <h2 style="font-size: 2.5rem; margin-top: 10px;">UNMATCHED <span style="font-style: italic; color: #666;">DETAILS</span></h2>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="bento-card p-8 flex flex-col items-center justify-center text-center aspect-square">
-                    <span class="text-4xl mb-4 text-gold">5+2</span>
-                    <span class="text-xs uppercase tracking-widest text-gray-400">Bedrooms</span>
+            <div class="bento-grid">
+                <div class="bento-card">
+                    <span class="bento-num">5+2</span>
+                    <span class="bento-label">Bedrooms</span>
                 </div>
-                <div class="bento-card p-8 flex flex-col items-center justify-center text-center aspect-square">
-                    <span class="text-4xl mb-4 text-gold">800<span class="text-lg">m²</span></span>
-                    <span class="text-xs uppercase tracking-widest text-gray-400">Land Area</span>
+                <div class="bento-card">
+                    <span class="bento-num">800<span style="font-size:1rem">m²</span></span>
+                    <span class="bento-label">Land Area</span>
                 </div>
-                <div class="bento-card p-8 flex flex-col items-center justify-center text-center aspect-square col-span-2 md:col-span-1 bg-gold/10 border-gold/50">
-                    <span class="text-xl mb-2 font-bold text-white">SMART</span>
-                    <span class="text-xs uppercase tracking-widest text-gold">Home System V.2</span>
+                <div class="bento-card" style="background: rgba(212, 175, 55, 0.1); border-color: rgba(212, 175, 55, 0.3);">
+                    <span class="bento-num" style="font-size: 1.5rem; color: #fff;">SMART</span>
+                    <span class="bento-label" style="color: var(--gold);">Home System V.2</span>
                 </div>
-                <div class="bento-card p-8 flex flex-col items-center justify-center text-center aspect-square">
-                    <span class="text-4xl mb-4 text-gold">4</span>
-                    <span class="text-xs uppercase tracking-widest text-gray-400">Car Garage</span>
+                <div class="bento-card">
+                    <span class="bento-num">4</span>
+                    <span class="bento-label">Car Garage</span>
                 </div>
-                <div class="col-span-2 bento-card p-8 flex flex-col justify-center relative overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=1000" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-110 transition duration-700">
-                    <div class="relative z-10">
-                        <h3 class="text-2xl text-white mb-2">Private Sky Pool</h3>
-                        <p class="text-xs text-gray-400">Infinity pool dengan pemandangan kota tanpa batas.</p>
+                <div class="bento-card bento-wide">
+                    <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=600" class="bento-img" alt="Pool">
+                    <div class="bento-content">
+                        <h3>Private Sky Pool</h3>
+                        <p style="font-size: 0.8rem; color: #ccc;">Infinity pool dengan pemandangan kota tanpa batas.</p>
                     </div>
                 </div>
-                <div class="col-span-2 bento-card p-8 flex flex-col justify-center relative overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-110 transition duration-700">
-                    <div class="relative z-10 text-right">
-                        <h3 class="text-2xl text-white mb-2">Master Suite</h3>
-                        <p class="text-xs text-gray-400">Walk-in closet seluas apartemen studio & Bathub marmer.</p>
+                <div class="bento-card bento-wide">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600" class="bento-img" alt="Suite">
+                    <div class="bento-content" style="text-align: right; padding-left: 40%;">
+                        <h3>Master Suite</h3>
+                        <p style="font-size: 0.8rem; color: #ccc;">Walk-in closet seluas apartemen studio & Bathub marmer.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="location" class="py-24 px-6 bg-[#050505]">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl text-white mb-10">PRIME <span class="text-gold">LOCATION</span></h2>
+    <section id="location" class="section" style="background: #050505;">
+        <div class="container text-center">
+            <h2 style="font-size: 2.5rem; margin-bottom: 40px;">PRIME <span class="text-gold">LOCATION</span></h2>
             
-            <div class="border border-white/10 p-2 rounded-xl bg-white/5">
-                <div class="h-[400px] w-full rounded-lg overflow-hidden relative">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.716909516854!2d106.704859!3d-6.24009405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88ed343af45fc195%3A0x98e5b8eaad8e2564!2sCiledugPromo.biz.id%20%7C%20Layanan%20Bisnis%20%26%20Pemasaran!5e0!3m2!1sid!2sid!4v1768642599691!5m2!1sid!2sid" 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0; filter: grayscale(100%) invert(92%) contrast(83%); -webkit-filter: grayscale(100%) invert(92%) contrast(83%);" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                    
-                    <div class="absolute bottom-4 left-4 bg-black/80 px-4 py-2 border-l-2 border-gold backdrop-blur-md">
-                        <p class="text-[10px] text-gold uppercase tracking-widest">Akses Tol: 5 Menit</p>
-                    </div>
-                </div>
+            <div class="map-frame">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.716909516854!2d106.704859!3d-6.24009405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88ed343af45fc195%3A0x98e5b8eaad8e2564!2sCiledugPromo.biz.id%20%7C%20Layanan%20Bisnis%20%26%20Pemasaran!5e0!3m2!1sid!2sid!4v1768642599691!5m2!1sid!2sid" 
+                    allowfullscreen="" loading="lazy">
+                </iframe>
             </div>
             
-            <p class="mt-8 text-gray-500 text-sm max-w-2xl mx-auto">
+            <p style="margin-top: 30px; color: #666; font-size: 0.9rem; max-width: 600px; margin-left: auto; margin-right: auto;">
                 Terletak di kawasan elite Ciledug - Tangerang. Dekat dengan CBD, International School, dan Rumah Sakit Premium. Privasi dan keamanan 24 jam terjamin.
             </p>
         </div>
     </section>
 
-    <footer class="bg-black py-20 text-center border-t border-white/5 mb-16 md:mb-0">
-        <div class="text-2xl font-bold tracking-widest text-white mb-6">MANSION<span class="text-gold">AURA.</span></div>
-        <div class="flex justify-center gap-6 mb-10">
-            <a href="#" class="text-gray-500 hover:text-white text-xs uppercase tracking-widest">Brochure</a>
-            <a href="#" class="text-gray-500 hover:text-white text-xs uppercase tracking-widest">Floor Plan</a>
-            <a href="#" class="text-gray-500 hover:text-white text-xs uppercase tracking-widest">Contact</a>
+    <footer>
+        <div class="nav-logo" style="margin-bottom: 20px;">MANSION<span class="text-gold">AURA.</span></div>
+        <div class="footer-links">
+            <a href="#">Brochure</a>
+            <a href="#">Floor Plan</a>
+            <a href="#">Contact</a>
         </div>
-        <p class="text-[10px] text-gray-700 tracking-[0.2em] uppercase">
-            © 2026 Ciledug Promo Property Division.<br>
-            All Rights Reserved.
+        
+        <div class="tech-partner">
+            <a href="https://ciledugpromo.biz.id/produk/11873/jasa-pembuatan-website-profesional-terima-beres-murah" target="_blank" title="Official Web Partner">Website Partner</a>
+            <span style="color:#222">•</span>
+            <a href="https://ciledugpromo.biz.id/produk/10905/jasa-seo-tangerang-terbaik-strategi-posting-1000-website-untuk-dominasi-pasar" target="_blank" title="Digital Strategy">SEO Strategy</a>
+            <span style="color:#222">•</span>
+            <a href="https://ciledugpromo.biz.id/produk/11874/jasa-landing-page-ciledug-tangerang" target="_blank" title="Marketing Solutions">Landing Page Partner</a>
+        </div>
+
+        <p style="margin-top: 30px; font-size: 0.6rem; color: #444; letter-spacing: 2px; text-transform: uppercase;">
+            © 2026 Ciledug Promo Property Division. All Rights Reserved.
         </p>
     </footer>
 
-    <div class="sticky-bar fixed bottom-0 w-full z-[100] px-6 py-4 flex justify-between items-center">
-        <div class="hidden md:block">
-            <p class="text-white text-sm font-bold">THE MANSION AURA</p>
-            <p class="text-gold text-xs">Start from IDR 5.5 Billion</p>
+    <div class="sticky-bar">
+        <div class="sticky-price">
+            <h4>THE MANSION AURA</h4>
+            <span>Start from IDR 5.5 Billion</span>
         </div>
-        <div class="flex gap-4 w-full md:w-auto">
-            <a href="https://wa.me/6285283212205?text=Halo%20Admin,%20saya%20minta%20E-Brochure%20The%20Mansion" class="flex-1 md:flex-none text-center px-6 py-3 border border-white/20 text-white text-xs font-bold uppercase tracking-widest hover:bg-white/10 transition">
-                E-Brochure
+        <div class="sticky-btns">
+            <a href="https://wa.me/6285283212205?text=Halo%20Admin,%20saya%20minta%20E-Brochure%20The%20Mansion" class="btn-outline">
+                E-BROCHURE
             </a>
-            <a href="https://wa.me/6285283212205?text=Halo%20Admin,%20saya%20mau%20Check%20Availability%20Unit" class="flex-1 md:flex-none text-center px-6 py-3 bg-gold text-black text-xs font-bold uppercase tracking-widest hover:bg-yellow-500 transition shadow-[0_0_15px_rgba(212,175,55,0.4)]">
-                Check Availability
+            <a href="https://wa.me/6285283212205?text=Halo%20Admin,%20saya%20mau%20Check%20Availability%20Unit" class="btn-fill">
+                CHECK AVAILABILITY
             </a>
         </div>
     </div>
